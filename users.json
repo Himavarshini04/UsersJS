@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Bob",
+      "branch": "IT"
+    },
+    {
+      "id": "3",
+      "name": "Jack",
+      "branch": "CSE"
+    },
+    {
+      "id": "5",
+      "name": "Percy",
+      "branch": "CSIT"
+    }
+  ]
+}

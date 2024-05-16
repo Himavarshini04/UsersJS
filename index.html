@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API CRUD Operations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-gGHg0/bBmD6Z9O+v/SfBAG37HHvpntzvRUtvsR9e6h6Q+kxXWooLNKy4zJnz3s9lZ0XaxRK6aVxdVbjuj9XgQw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel = "stylesheet" href = "index.css">
+    </head>
+    <body><center>
+        <div id = "Input">
+        <h1>CRUD Operations</h1>
+        <label>Id: </label>
+        <input type = "text" id = "id"><br><br>
+        <label>Name: </label>
+        <input type = "text" id = "name"><br><br>
+        <label>Branch: </label>
+        <input type = "text" id = "branch"><br><br>
+
+        <!-- <button class = "button" onclick="getData()"><img src="icons/fetch.png" alt="Fetch"></button> -->
+        <button class = "button" onclick="createData()"><img src = "icons/insert.png" alt = "Insert"></button>
+        <!-- <button class = "button" onclick="deleteData()">Delete</button>
+        <button class = "button" onclick="updateData()">Update</button> -->
+        
+        </div><br><br>
+        <div id = "updateTable"></div> 
+        <div id = "displayTable"></div>
+    </center>
+    </body>
+    <script src = "crud.js"></script>
+</html>

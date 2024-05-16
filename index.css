@@ -1,0 +1,43 @@
+body {
+    margin-top: 50px;
+    /* background-image: url('bg.avif');
+    background-size:cover;
+    background-position: center; 
+    background-repeat: repeat; */
+    background-color:rgb(238, 221, 198);
+}
+
+img{
+    width: 20px;
+    height : 20px
+}
+
+#userTable {
+    text-align: center;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+#userTable th, #userTable td {
+    text-align: center;
+    border: 1px solid #66304e;
+    padding: 8px;
+    text-align: left;
+}
+
+#userTable th {
+    text-align: center;
+    background-color: #5098c2;
+
+}
+#userTable td {
+    text-align: center;
+}
+
+#userTable tbody tr:nth-child(even) {
+    background-color: #d1d1e2;
+}
+
+#userTable tbody tr:hover {
+    background-color: #eee9e0;
+}
