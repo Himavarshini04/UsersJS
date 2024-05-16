@@ -4,15 +4,37 @@ body {
     background-size:cover;
     background-position: center; 
     background-repeat: repeat; */
-    background-color:rgb(238, 221, 198);
+    background-color:rgb(247, 240, 230);
+    /* background-color:#faf3e0  ; */
 }
 
 img{
-    width: 20px;
-    height : 20px
+    width: 25px;
+    height : 25px
 }
 
+.input {
+    width: 300px; 
+    height: 30px; 
+    padding: 8px; 
+    margin: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: color 0.3s ease; 
+}
+
+.input::placeholder {
+    color: #999; 
+}
+
+.input:focus::placeholder {
+    color: transparent; 
+}
+
+
 #userTable {
+    font-size: 18px;
     text-align: center;
     border-collapse: collapse;
     width: 75%;
@@ -26,8 +48,10 @@ img{
 }
 
 #userTable th {
+    height: 35px;
     text-align: center;
-    background-color: #5098c2;
+    background-color: #6eb2da;
+    /* background-color: #b47348   ; */
 
 }
 #userTable td {
@@ -36,8 +60,9 @@ img{
 
 #userTable tbody tr:nth-child(even) {
     background-color: #d1d1e2;
+    /* background-color: #f5cba7   ; */
 }
 
 #userTable tbody tr:hover {
-    background-color: #eee9e0;
+    background-color: #fff9f9;
 }
