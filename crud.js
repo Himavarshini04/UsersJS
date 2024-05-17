@@ -138,26 +138,87 @@ function displayData(data){
     userDataDiv.appendChild(user_table);
 }
 
+
+
+// function searchData() {
+//     fetch(`http://localhost:3000/users/${id}`)
+
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data)
+//             getData();
+//         })
+// }
+
+
+function searchData() {
+    const searchId = document.getElementById("search_id").value;
+    const tableRows = document.querySelectorAll("#userTable tbody tr");
+
+    tableRows.forEach(row => {
+        const rowId = row.cells[0].innerText; // Assuming ID is in the first column
+        if (rowId === searchId) {
+            row.classList.add("highlight-row"); // Add CSS class to highlight row
+            setTimeout(() => {
+                row.classList.remove("highlight-row");
+            }, 5000);
+        }
+        // else{
+        //     alert("User not found")
+        //     return
+        // }
+    });
+}
+
+
 // Call getData() when the document is ready
 document.addEventListener("DOMContentLoaded", function() {
     getData();
 });
-// function deleteRow(id) {
-//     axios.delete(`http://localhost:3000/users/${id}`)
-//         .then(res => {
-//             getData(); // Refresh the table after successful deletion
-//         })
-//         .catch(error => console.log(error));
-// }
 
-// function updateRow(id) {
-//     const email = prompt("Enter new email:");
 
-//     axios.patch(`http://localhost:3000/users/${id}`, {
-//         email: email
-//     })
-//     .then(res => {
-//         getData(); // Refresh the table after successful update
-//     })
-//     .catch(error => console.log(error));
-// }
+
+
+//NOT WORKING
+
+// Define sorting states for each column
+const sortStates = {
+    id: "asc",
+    name: "asc",
+    branch: "asc"
+};
+
+// Sort table data based on column and sorting state
+function sortTable(column) {
+    const table = document.getElementById("userTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    // Sort rows based on column value
+    rows.sort((rowA, rowB) => {
+        const valueA = rowA.cells[column].innerText;
+        const valueB = rowB.cells[column].innerText;
+
+        if (sortStates[column] === "asc") {
+            return valueA.localeCompare(valueB);
+        } else {
+            return valueB.localeCompare(valueA);
+        }
+    });
+
+    // Rearrange rows in table
+    tbody.innerHTML = "";
+    rows.forEach(row => tbody.appendChild(row));
+
+    // Toggle sorting state for next click
+    sortStates[column] = sortStates[column] === "asc" ? "desc" : "asc";
+}
+
+// Add event listeners to table header cells for sorting
+document.querySelectorAll("#userTable th").forEach((header, index) => {
+    header.addEventListener("click", () => {
+        console.log(`Header cell ${index} clicked`);
+        sortTable(index);
+    });
+});
+

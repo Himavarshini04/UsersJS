@@ -13,6 +13,12 @@ img{
     height : 25px
 }
 
+#search-box{
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+    justify-content: center;
+}
+
 .input {
     width: 300px; 
     height: 30px; 
@@ -31,6 +37,8 @@ img{
 .input:focus::placeholder {
     color: transparent; 
 }
+
+
 
 
 #userTable {
@@ -65,4 +73,12 @@ img{
 
 #userTable tbody tr:hover {
     background-color: #fff9f9;
+}
+
+.highlight-row {
+    background-color: #97929241; /* Change to the color you want for highlighting */
+}
+
+#userTable tbody tr.highlight-row:nth-child(even) {
+    background-color: #97929241; /* Change to the color you want for highlighting */
 }
