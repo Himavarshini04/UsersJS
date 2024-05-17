@@ -53,9 +53,11 @@ Before running the application, ensure you have the following installed:
 
 # Root
 
-![image](https://github.com/Himavarshini04/UsersJS/assets/105404557/5cbe6c79-957f-474a-86ea-61d4edbfa75f)
+![image](https://github.com/Himavarshini04/UsersJS/assets/105404557/0ce190a6-ecd0-4b07-a8b2-20bb10a41b08)
+
 
 
 # Update
 
-![image](https://github.com/Himavarshini04/UsersJS/assets/105404557/35da8ffc-9d3a-4795-a13e-a61d645e6a0c)
+![image](https://github.com/Himavarshini04/UsersJS/assets/105404557/5eb3e85c-e791-48dc-9935-6f60787a98c5)
+
